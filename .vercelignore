@@ -1,1 +1,4 @@
-__pycache__
+*.ipynb
+tests/
+docs/
+large_data/
