@@ -1,0 +1,4 @@
+*.ipynb
+tests/
+docs/
+large_data_files/
