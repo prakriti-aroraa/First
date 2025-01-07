@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Spam Detector</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='/static/style.css' rel='stylesheet'>
+</head>
+
+<body>
+    <h1>Welcome To Spam Detector</h1>
+
+    <div class="container">
+        <div class="left-side">
+            <img src="/static/spam.jpg" alt="Spam Image">
+        </div>
+
+        <div class="right-side">
+            <form action="/predict" method="post">
+                <textarea name="user_input" rows="4" cols="50" placeholder="Enter Text for Analysis..."></textarea>
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+            {% if result %}
+            <p> <b> Message :</b> {{msg_input}}</p>
+            <h2> <b>Result :</b> Message is "{{ result }}"</h2>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
